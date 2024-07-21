@@ -1,0 +1,72 @@
+[gd_scene load_steps=3 format=3 uid="uid://duh5gruwxfkf"]
+
+[ext_resource type="Script" path="res://PJ15/UI/RatMonitor.gd" id="1_p7r0o"]
+[ext_resource type="Texture2D" uid="uid://d34q1bmsth10a" path="res://PJ15/TileSet/ArrowButton.png" id="2_gfsc7"]
+
+[node name="Control" type="Control"]
+z_index = 20
+clip_contents = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_p7r0o")
+
+[node name="TabContainer" type="TabContainer" parent="."]
+layout_mode = 2
+offset_left = 720.0
+offset_right = 1176.0
+offset_bottom = 648.0
+grow_horizontal = 0
+
+[node name="All Rats" type="ScrollContainer" parent="TabContainer"]
+clip_contents = false
+layout_mode = 2
+
+[node name="RatList" type="VBoxContainer" parent="TabContainer/All Rats"]
+layout_mode = 2
+
+[node name="Waiters" type="ScrollContainer" parent="TabContainer"]
+visible = false
+clip_contents = false
+layout_mode = 2
+
+[node name="RatList" type="VBoxContainer" parent="TabContainer/Waiters"]
+layout_mode = 2
+
+[node name="Kitchen" type="ScrollContainer" parent="TabContainer"]
+visible = false
+clip_contents = false
+layout_mode = 2
+
+[node name="RatList" type="VBoxContainer" parent="TabContainer/Kitchen"]
+layout_mode = 2
+
+[node name="Expedition" type="ScrollContainer" parent="TabContainer"]
+visible = false
+clip_contents = false
+layout_mode = 2
+
+[node name="RatList" type="VBoxContainer" parent="TabContainer/Expedition"]
+layout_mode = 2
+
+[node name="Resting" type="ScrollContainer" parent="TabContainer"]
+visible = false
+clip_contents = false
+layout_mode = 2
+
+[node name="RatList" type="VBoxContainer" parent="TabContainer/Resting"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 696.0
+offset_top = 32.0
+offset_right = 720.0
+offset_bottom = 56.0
+scale = Vector2(-1, 1)
+pivot_offset = Vector2(12, 12)
+toggle_mode = true
+icon = ExtResource("2_gfsc7")

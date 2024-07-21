@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cd3qt2nr58t23"]
+
+[ext_resource type="Texture2D" uid="uid://bks6xetjixi4p" path="res://PJ15/TileSet/Table.png" id="1_u7e0n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dhmod"]
+size = Vector2(16, 16)
+
+[node name="Cauldron" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_dhmod")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+z_index = 15
+texture_filter = 1
+texture = ExtResource("1_u7e0n")

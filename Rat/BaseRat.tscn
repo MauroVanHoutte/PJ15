@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://0n5cyqgecijh"]
+
+[ext_resource type="Script" path="res://PJ15/Rat/RatScript.gd" id="1_3oyyo"]
+[ext_resource type="Texture2D" uid="uid://btp2n7jyud63p" path="res://PJ15/TileSet/RatFixed.png" id="2_lkt57"]
+[ext_resource type="Texture2D" uid="uid://dvgu8gsh3n3h8" path="res://PJ15/TileSet/RatFur.png" id="3_nvnsn"]
+
+[node name="BaseRat" type="Node2D"]
+script = ExtResource("1_3oyyo")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+path_desired_distance = 4.0
+target_desired_distance = 4.0
+path_max_distance = 10.0
+path_postprocessing = 1
+radius = 16.0
+avoidance_layers = 2
+debug_enabled = true
+
+[node name="SpriteRoot" type="Node2D" parent="."]
+scale = Vector2(-1, 1)
+
+[node name="Static" type="Sprite2D" parent="SpriteRoot"]
+z_index = 16
+texture_filter = 1
+texture = ExtResource("2_lkt57")
+
+[node name="Fur" type="Sprite2D" parent="SpriteRoot"]
+modulate = Color(1, 0.380392, 0.380392, 1)
+z_index = 16
+texture_filter = 1
+texture = ExtResource("3_nvnsn")

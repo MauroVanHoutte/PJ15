@@ -1,0 +1,106 @@
+[gd_scene load_steps=4 format=3 uid="uid://dbmo6ms5a1a4y"]
+
+[ext_resource type="Texture2D" uid="uid://cwka6hkk10a67" path="res://icon.svg" id="1_igyjc"]
+[ext_resource type="Script" path="res://PJ15/UI/RatInfo.gd" id="1_ixy85"]
+[ext_resource type="Texture2D" uid="uid://btp2n7jyud63p" path="res://PJ15/TileSet/RatFixed.png" id="2_owl60"]
+
+[node name="RatInfo" type="Control"]
+custom_minimum_size = Vector2(400, 100)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -752.0
+offset_bottom = -548.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ixy85")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+offset_right = 400.0
+offset_bottom = 100.0
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="RatStatic" type="TextureRect" parent="HBoxContainer/PanelContainer"]
+texture_filter = 1
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource("2_owl60")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="RatFur" type="TextureRect" parent="HBoxContainer/PanelContainer"]
+texture_filter = 1
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture = ExtResource("1_igyjc")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="TextBox" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="NameContainer" type="HBoxContainer" parent="HBoxContainer/TextBox"]
+layout_mode = 2
+
+[node name="NameTitle" type="Label" parent="HBoxContainer/TextBox/NameContainer"]
+layout_mode = 2
+text = "Name: "
+
+[node name="RatName" type="Label" parent="HBoxContainer/TextBox/NameContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "test"
+clip_text = true
+text_overrun_behavior = 1
+
+[node name="AssignmentContainer" type="HBoxContainer" parent="HBoxContainer/TextBox"]
+layout_mode = 2
+
+[node name="AssignmentTitle" type="Label" parent="HBoxContainer/TextBox/AssignmentContainer"]
+layout_mode = 2
+text = "Assignment: "
+
+[node name="RatAssignment" type="Label" parent="HBoxContainer/TextBox/AssignmentContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Test"
+clip_text = true
+text_overrun_behavior = 1
+
+[node name="StatusContainer" type="HBoxContainer" parent="HBoxContainer/TextBox"]
+layout_mode = 2
+
+[node name="StatusTitle" type="Label" parent="HBoxContainer/TextBox/StatusContainer"]
+layout_mode = 2
+text = "Status: "
+
+[node name="RatStatus" type="Label" parent="HBoxContainer/TextBox/StatusContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Test"
+clip_text = true
+text_overrun_behavior = 1
+max_lines_visible = 1
+
+[node name="Button" type="Button" parent="."]
+z_index = -1
+layout_mode = 0
+offset_right = 400.0
+offset_bottom = 100.0
+theme_override_colors/icon_hover_color = Color(0.458824, 0.458824, 0.458824, 1)
+disabled = true
+
+[node name="DetailWindow" type="PanelContainer" parent="."]
+visible = false
+modulate = Color(0, 1, 0.0823529, 1)
+layout_mode = 0
+offset_left = -400.0
+offset_bottom = 100.0
